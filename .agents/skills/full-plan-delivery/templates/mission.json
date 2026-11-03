@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "objective": "REPLACE with the complete approved outcome, audience and definition of success",
+  "roots": [{"id": "REPLACE", "name": "Complete approved roadmap"}],
+  "linked_task_ids": [],
+  "plan_maps": [],
+  "requirements": [],
+  "constraints": ["Preserve existing changes; use the selected live tracker as the only task-status authority."],
+  "authorization": {"implementation": false, "publication": false, "production_changes": false},
+  "tracker": {"kind": "beads", "binary": "bd", "dolt_root": ".delivery/runtime/dolt"},
+  "quality": {"required_commands": [], "independent_review_required": true},
+  "parallel": {"max_workers": 3, "contract_versions": {}, "integrator_paths": ["AGENTS.md", ".git/**", ".beads/**", ".delivery/**", ".claude/settings.json", ".github/workflows/**"]},
+  "memory_keys": {"mission": "delivery-mission", "handoff": "delivery-handoff"}
+}
+

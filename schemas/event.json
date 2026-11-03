@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:event:v1",
+  "title": "event",
+  "type": "object",
+  "required": [
+    "event_id",
+    "kind",
+    "subject_id",
+    "occurred_at",
+    "principal",
+    "payload_hash",
+    "previous_hash",
+    "event_hash"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "principal": {
+      "type": "string"
+    },
+    "payload_hash": {
+      "type": "string"
+    },
+    "previous_hash": {
+      "type": "string"
+    },
+    "event_hash": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}

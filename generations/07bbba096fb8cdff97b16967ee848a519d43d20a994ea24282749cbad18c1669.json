@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "generation_id": "sha256:07bbba096fb8cdff97b16967ee848a519d43d20a994ea24282749cbad18c1669",
+  "version": "0.1.0",
+  "source_hash": "07bbba096fb8cdff97b16967ee848a519d43d20a994ea24282749cbad18c1669",
+  "files": {
+    "wisdom/__init__.py": "e69c129d3a955e05e6b4e1d50de8f202cebb739649db233e931b8a0162ea515e",
+    "wisdom/__main__.py": "23bb93dfa82b94036fce266f0a5b99f353ebebb2bb71dd25eb3379875a9fc557",
+    "wisdom/access.py": "cf3d916af1fb5c2308edfd007c67a76b0523d1f534424bc40681d1b04f844816",
+    "wisdom/annotations.py": "98ac9e0ece29899d56fb0949e25262ca73eae9e1d4a5218116e6e6635be6c8d9",
+    "wisdom/api.py": "d3281f1ff4e41d2b2e2ff26ab04c271c81f3dd54f3eb43738d5936147d3836d5",
+    "wisdom/cli.py": "718b46334120b9b5b98c2a765d4f5d289a216fb7b5187f31715cbb18c732e3cd",
+    "wisdom/composition.py": "503bea1ba29d10c2cc05d9445c13d07d24993afa76b1f1ec9ecc1fcb77c63f46",
+    "wisdom/errors.py": "c61ffad87914a203427010d25fc23a9229ecf7ef5445a2867cf1c16597cd8a0b",
+    "wisdom/evidence.py": "8cfe55975473c8f16b99ae892ea13e38290c57de6e4b85c071e3767663ac1552",
+    "wisdom/exports.py": "fb4e51119c6985805c9d7ccece840ed34787302d5dd6f530f2bb286bda8e2771",
+    "wisdom/generation.py": "8d595b3be5aa3cd470cfda372a68770b0730bdd3358be5a5905e32a5bd94a358",
+    "wisdom/governance.py": "c2aa7e246dd27d983f5e8cff34c0fa592af3b0cf41fcf52a8d3a3e030eab6143",
+    "wisdom/ingest.py": "738d9de37b1a5d72fe07e5b5906dfb1e0333ed04949e4cc56dd77b57111e8b6f",
+    "wisdom/invention.py": "1aff3be8bed4ddff9945c87e7e8a835f9d24e84d6ac704dbb80208c3a62f6898",
+    "wisdom/learning.py": "e2d13cc49775f36a00d83b8dd042c7e5597035dcc669f48730c5d3a969c8f4d7",
+    "wisdom/memory.py": "f56cbc04cfe55293548fcf232dc9a114dea3dd3dcbb9ab61cf20e4c2e41256a8",
+    "wisdom/ports.py": "20626a45e2fccdfc4a99480b14f7872f49197e48b55504959db9eb6755972fdc",
+    "wisdom/providers.py": "41eca75641fb293550a7922bbc68c1f9a6ab27aacc1560f94d7c3d6522c4840b",
+    "wisdom/retrieval.py": "9105bf249cbc6b3a7905fc7657bc6f325faf49e229764ebe8f1c22e8062af783",
+    "wisdom/store.py": "b9400e57dc375ae567d5fff8364b1aa0f1f871662da6f75aaf765d0563c6ce8f",
+    "wisdom/theory.py": "523c75c10033016d89fb8ab4e01af9c0f98138785862fb65c0448cf45a4e73ae",
+    "wisdom/watchdog.py": "8374e605bd05cf1b02acd700e9948f1ca196c32ec9750182ab7da1c45dac2b4c",
+    "wisdom/web/app.js": "a6f9dc53f5faa9ab90791466544827bb230eb0be88a090aae492472210745bca",
+    "wisdom/web/index.html": "b7fd2034702dcd7b1de9c408e047ced7e0107e5b6854500be6c92941bca22287",
+    "wisdom/web/style.css": "57ce9bca75a0778c857784245e74ee84b8c7956fbe5cadbb918860e253b0d9cd",
+    "wisdom/workflows.py": "2fe432ca2b0e1b28eb43e1cbd1babc1d8bb2a757bd5998f10037249646289862",
+    "architecture/constitution.json": "c26095428314a4af07a6a87e517ea04e26c49414c4c574a0f3d13441ddbfb8f6",
+    "architecture/slots.json": "6c966043c83ab4c463dd3a3efab63ef2334a906164e93efb2d7ae6e0f6d58275",
+    "schemas/argument.json": "7daa8266908745c57a5a0424feb9bd80c9de25abb33e8340d6c98c331c2fa4e4",
+    "schemas/assessment.json": "d42f60bd35d43df6e310fc8daf8592ff4dd412304660ceb9f4d0d279dfff8298",
+    "schemas/claim.json": "cf167a7902a21c86aaaa01aafca7168e73c6e7567dab2d3d02a05fcfbd74aa21",
+    "schemas/decision.json": "01ddb6d083842353e6361708e069c20da8c490fb41a9e67298d1a5e98e801ef1",
+    "schemas/event.json": "7850a0a390f32ecb2690559ad2213c37dcb0faf82fa3c5f04de9ca2925db2459",
+    "schemas/experiment.json": "df7863acf76b72904c122a089539f9ad16fac95c7c9311c055299d5e47d86cdf",
+    "schemas/goal.json": "dc0fa09841ef54dc11ef19f854a589aec2a94ab81729b23c1cff6f7a927b2643",
+    "schemas/idea.json": "1d9a1da9ec0447a8d53d755ceda6c55e7b5d887f6673a01fe4d9757f67c7f48c",
+    "schemas/interpretation.json": "2e8242ec8da2c2ad7521a28d9ac9398228df0c830e27f9bb9b06934faae93793",
+    "schemas/mechanism.json": "3605ce22412af0dd92ec08daea3632bcc0a2f2971b8bb5a785c71c1231113c3b",
+    "schemas/outcome.json": "8de101ebd2d0dc7cff076578fdf4ad48d5209fa02b373bd96363626719d010b1",
+    "schemas/policy.json": "a4080bf87bfae054b04a2788c8e412e516034cd73546c28cc5a39401c0fcd5fa",
+    "schemas/prediction.json": "fb34f4bdca4038f12918e814dfca5c74a180d4887c56acb82d160e6b6b4f8e12",
+    "schemas/problem.json": "39a23e33c6a6a0843fc54a45e3a20888afddc059a8a5c4c2814f97efc9b58bfe",
+    "schemas/skill.json": "bf547e29f2d81a9fc8b3931790e75dcf79016a1dabbb74553b8da1a39004eaed",
+    "schemas/source.json": "3960d6855098a6c2fd6f806465c24f92ff33ea59fd9f62802ac4221af1eb0917",
+    "schemas/span.json": "f87773255faf1f2bfdf59e4411e06cd11d255b6a16f83a7aa8179524f85b7a9a",
+    "schemas/theory.json": "10a25a9bf72a8f36146697510a190ffe3b816362745f87d822acb9bd947ea7cb",
+    "schemas/trigger.json": "ceb7713bfdea4eaf2e4b61f6f2971e1a8ccf94a820c2578572dca6e8c74633df",
+    "schemas/utterance.json": "ca500cd5a39bed65b3cdbc97c65b842bdb3f2f4f0bcb1bb5c5cf6f05c88b1992",
+    "schemas/viewpoint.json": "978f0f6cfb4b08362dae251126630f39d1e3ab60632df1b172c45432ccb8edfa",
+    "pyproject.toml": "d10664c9614ea79ed99d36d344a6edf4bb8eb572ae88ae075bd517eb10154e66"
+  },
+  "bindings": {
+    "schema_version": "1.0.0",
+    "slots": [
+      {
+        "id": "canonical-store",
+        "contract": "store-port@1.0.0",
+        "binding": "wisdom.store.Store",
+        "compatibility": "tests.test_store"
+      },
+      {
+        "id": "proposal-provider",
+        "contract": "proposal-provider@1.0.0",
+        "binding": "optional JSONProvider through ConsentProvider",
+        "compatibility": "tests.test_runtime"
+      },
+      {
+        "id": "evidence",
+        "contract": "foundry-services@1.0.0",
+        "binding": "wisdom.evidence.EvidenceService",
+        "compatibility": "tests.test_evidence"
+      },
+      {
+        "id": "retrieval",
+        "contract": "foundry-services@1.0.0",
+        "binding": "wisdom.retrieval.RetrievalService",
+        "compatibility": "tests.test_runtime"
+      }
+    ],
+    "composition_root": "wisdom/composition.py",
+    "runtime_profiles": [
+      "local",
+      "advisory"
+    ],
+    "disabled_profiles": [
+      "external-agentic",
+      "self-modifying",
+      "distributed",
+      "multi-tenant"
+    ]
+  },
+  "policy_hash": "c26095428314a4af07a6a87e517ea04e26c49414c4c574a0f3d13441ddbfb8f6",
+  "dependency_policy": "Python 3.12+ standard library; no runtime package dependencies",
+  "runtime_agentic_profile": "advisory only; external executor disabled",
+  "activation": "Manual verified checkout and process restart; no automatic production promotion"
+}

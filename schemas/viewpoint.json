@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:viewpoint:v1",
+  "title": "viewpoint",
+  "type": "object",
+  "required": [
+    "claim_ids",
+    "position",
+    "context",
+    "stance"
+  ],
+  "properties": {
+    "claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "position": {
+      "type": "string"
+    },
+    "context": {
+      "type": "string"
+    },
+    "stance": {
+      "enum": [
+        "endorsement",
+        "dissent",
+        "alternative",
+        "unresolved"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}

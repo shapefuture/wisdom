@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:skill:v1",
+  "title": "skill",
+  "type": "object",
+  "required": [
+    "trigger",
+    "prerequisites",
+    "procedure",
+    "contraindications",
+    "required_authority"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "trigger": {
+      "type": "string"
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "procedure": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contraindications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "abort_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required_authority": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "promoted_conditional"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}

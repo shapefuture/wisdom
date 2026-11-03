@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:policy:v1",
+  "title": "policy",
+  "type": "object",
+  "required": [
+    "name",
+    "purpose",
+    "status"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "proposed",
+        "shadow",
+        "reviewed",
+        "rejected"
+      ]
+    },
+    "baseline_id": {
+      "type": "string"
+    },
+    "heldout_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}

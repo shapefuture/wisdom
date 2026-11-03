@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:source:v1",
+  "title": "source",
+  "type": "object",
+  "required": [
+    "title",
+    "rights",
+    "content_hash",
+    "status"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "uri": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rights": {
+      "type": "object",
+      "required": [
+        "allowed",
+        "license",
+        "private",
+        "allow_export"
+      ],
+      "properties": {
+        "allowed": {
+          "type": "boolean"
+        },
+        "license": {
+          "type": "string"
+        },
+        "private": {
+          "type": "boolean"
+        },
+        "allow_export": {
+          "type": "boolean"
+        },
+        "allow_model": {
+          "type": "boolean"
+        },
+        "expires_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "content_hash": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "DISCOVERED",
+        "ACCESSIBLE",
+        "CAPTURED",
+        "PARTIAL",
+        "BLOCKED",
+        "REVIEWED",
+        "EXPIRED"
+      ]
+    },
+    "original_text": {
+      "type": "string"
+    },
+    "source_family": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}

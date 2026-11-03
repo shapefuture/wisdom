@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "risk_profile": "R2 local persistent research, advisory only",
+  "invariants": [
+    {
+      "id": "exact-source",
+      "rule": "Source quotations resolve to immutable exact spans; attribution is not truth."
+    },
+    {
+      "id": "no-authority-laundering",
+      "rule": "Source/model text cannot change rights, values, evaluator, policy or execution authority."
+    },
+    {
+      "id": "immutable-predictions",
+      "rule": "Outcomes append after sealed prediction; no retroactive rewriting."
+    },
+    {
+      "id": "purpose-rights",
+      "rule": "All serving, model-sharing and export operations honor source ancestry rights and expiry."
+    },
+    {
+      "id": "bounded-hypotheses",
+      "rule": "Theory/transfer/observational results cannot silently become tested causal facts."
+    },
+    {
+      "id": "human-goals",
+      "rule": "Human goals/values require explicit human approval."
+    },
+    {
+      "id": "no-external-executor",
+      "rule": "Runtime may read local authorized state and propose; no consequential external action executor."
+    }
+  ],
+  "state_strategy": "hybrid SQLite transactional versions and digest-only append journal",
+  "effects": {
+    "read": "E1",
+    "local_record": "E2",
+    "local_revision": "E3",
+    "model_call": "E4 bounded opted-in remote processing",
+    "external_execution": "disabled"
+  },
+  "fault_envelope": [
+    "process interruption",
+    "duplicate request",
+    "concurrent CAS writers",
+    "malformed source/model output",
+    "unavailable provider"
+  ],
+  "legitimate_state": "Valid database schema, verified event chain, exact source span anchors, no running orphaned jobs, no unauthorized external executor.",
+  "recovery": "Restart marks orphaned jobs interrupted; explicit retries <=3; restore checked backup for corrupt authoritative state."
+}
+

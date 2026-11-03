@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:trigger:v1",
+  "title": "trigger",
+  "type": "object",
+  "required": [
+    "conditions",
+    "expires_at",
+    "authority"
+  ],
+  "properties": {
+    "conditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "signal",
+          "operator"
+        ],
+        "properties": {
+          "signal": {
+            "type": "string"
+          },
+          "operator": {
+            "enum": [
+              "eq",
+              "gte",
+              "lte",
+              "contains",
+              "changed"
+            ]
+          },
+          "value": {}
+        }
+      }
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "authority": {
+      "const": "advisory_only"
+    },
+    "linked_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}

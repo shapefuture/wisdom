@@ -1,0 +1,20 @@
+{
+  "task_id": "EXISTING-LIVE-TASK-ID",
+  "base_revision": "git:EXACT-CLEAN-HEAD-SHA",
+  "read_paths": ["docs/spec.md", "src/contracts/**"],
+  "write_paths": ["src/feature/**", "tests/feature/**"],
+  "outputs": ["src/feature/implementation.py", "tests/feature/test_behavior.py"],
+  "contract_reads": {"feature-port": "1.0.0"},
+  "contract_writes": [],
+  "shared_resources": [],
+  "role": "worker",
+  "priority": 1,
+  "critical_path_rank": 0,
+  "acceptance": ["Concrete observable success and failure/recovery behavior from the task card"],
+  "quality_commands": [["python3", "-m", "unittest", "discover", "-s", "tests/feature"]],
+  "capabilities": ["read declared baseline", "edit declared local output paths"],
+  "effect_class": "local-code",
+  "rollback": "Revert the candidate patch; no external effect authorized",
+  "handoff": "Output digest, checks actually run, limitations and next contract consumer"
+}
+

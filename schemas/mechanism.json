@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:mechanism:v1",
+  "title": "mechanism",
+  "type": "object",
+  "required": [
+    "title",
+    "intervention",
+    "boundary_conditions",
+    "contraindications"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "intervention": {
+      "type": "string"
+    },
+    "claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "theory_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boundary_conditions": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "null"
+      ]
+    },
+    "contraindications": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "null"
+      ]
+    },
+    "functional_signature": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "null"
+      ]
+    },
+    "structural_signature": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "null"
+      ]
+    },
+    "epistemic_type": {
+      "const": "TRANSFER_HYPOTHESIS"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}

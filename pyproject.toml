@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wisdom-foundry"
+version = "0.1.0"
+description = "Evidence-grounded theory, invention, decision and learning workbench"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+wisdom = "wisdom.cli:main"
+
+[tool.setuptools.package-data]
+wisdom = ["web/*"]
+
+[tool.setuptools.packages.find]
+include = ["wisdom*"]
+exclude = ["tests*"]
+

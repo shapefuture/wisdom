@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.agents/skills/full-plan-delivery/scripts/delivery.py\" session --project \"$CLAUDE_PROJECT_DIR\"",
+            "timeout": 240
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.agents/skills/full-plan-delivery/scripts/delivery.py\" session --project \"$CLAUDE_PROJECT_DIR\"",
+            "timeout": 240
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,831 @@
+{
+  "items": [
+    {
+      "id": "WF-ROOT",
+      "title": "Deliver Wisdom Foundry 11",
+      "issue_type": "epic",
+      "status": "in_progress",
+      "acceptance": "All 22 blueprint sections mapped, software verified and external empirical gates evidenced independently.",
+      "metadata": {}
+    },
+    {
+      "id": "WF-FOUNDATION",
+      "title": "Freeze architecture contracts and development isolation",
+      "status": "closed",
+      "acceptance": "Frozen ports, source spec, invariants, six isolated workcells and recovery tracker.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [
+              "SPEC-01",
+              "SPEC-02",
+              "SPEC-17",
+              "SPEC-20",
+              "AAA-7.1"
+            ],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": []
+    },
+    {
+      "id": "WF-STORE",
+      "title": "Versioned canonical state and governance",
+      "status": "closed",
+      "acceptance": "SQLite/FTS survives reopen; immutable spans/predictions; CAS/idempotency; tamper detection; rights/four-way gate; deletion propagates.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": false,
+      "dependencies": [
+        {
+          "depends_on_id": "WF-FOUNDATION",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [
+              "SPEC-04",
+              "SPEC-14"
+            ],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-EVIDENCE",
+      "title": "Authorized ingestion and faithful evidence",
+      "status": "closed",
+      "acceptance": "Text/SRT/VTT offsets and timestamps verified; qualifications/disagreement preserved; analyst readings typed; corrections versioned; inaccessible source explicitly blocked.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": false,
+      "dependencies": [
+        {
+          "depends_on_id": "WF-FOUNDATION",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [
+              "SPEC-05",
+              "SPEC-12"
+            ],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-THEORY",
+      "title": "Theory and bidirectional invention",
+      "status": "closed",
+      "acceptance": "Scoped theory and negative cases; mechanism cards; independent problem diagnosis; mapped/unmapped transfer; adversarial test; no-match result.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": false,
+      "dependencies": [
+        {
+          "depends_on_id": "WF-FOUNDATION",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [
+              "SPEC-06",
+              "SPEC-07",
+              "SPEC-21"
+            ],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-LEARN",
+      "title": "Decisions and outcome learning",
+      "status": "closed",
+      "acceptance": "Human choices and stopping rules; immutable pre-observation forecasts; experiments and bounded observations; conditional skills with distinct knowledge/authority gates.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": false,
+      "dependencies": [
+        {
+          "depends_on_id": "WF-FOUNDATION",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [
+              "SPEC-08",
+              "SPEC-11"
+            ],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-WEB",
+      "title": "Usable evidence-to-learning web workbench",
+      "status": "blocked",
+      "acceptance": "Keyboard usable source intake/review, atlas, discovery, decision/experiment/TRACE flows, lineage and export; no fake data or unsafe HTML.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": true,
+      "dependencies": [
+        {
+          "depends_on_id": "WF-FOUNDATION",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {},
+      "comments": [],
+      "owner": "root",
+      "blocker": "Implementation, HTTP/control/schema and syntax checks pass. Actual desktop/mobile rendering, keyboard interaction and human usability acceptance remain pending WF-BROWSER."
+    },
+    {
+      "id": "WF-REVIEW",
+      "title": "Independent harsh specification and security review",
+      "status": "closed",
+      "acceptance": "Separate agent examines real implementation/tests, adversarial injection/rights/immutability; records blocking defects and exact candidate identity.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": false,
+      "dependencies": [
+        {
+          "depends_on_id": "WF-FOUNDATION",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [
+              "SPEC-22",
+              "AAA-7.1"
+            ],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-RUNTIME",
+      "title": "Retrieval memory workflows and providers",
+      "status": "closed",
+      "acceptance": "Permission-aware multi-lens context with negatives, hierarchy and version; bounded resumable jobs; triggers expiry/dedup/silence; explicit goals; real configurable provider with conservative offline mode.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": false,
+      "dependencies": [
+        {
+          "depends_on_id": "WF-FOUNDATION",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [
+              "SPEC-03",
+              "SPEC-09",
+              "SPEC-10"
+            ],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-OPS",
+      "title": "Integrated delivery and operational assurance",
+      "status": "in_progress",
+      "acceptance": "End-to-end HTTP scenario, CLI, CI, architecture/swap/recovery checks, generation identity, rollback instructions and pushed candidate.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": false,
+      "dependencies": [
+        {
+          "depends_on_id": "WF-FOUNDATION",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {},
+      "comments": [
+        {
+          "text": "DELIVERY-HANDOFF 5bea7b65a4f796f8\n{\"blocker\": \"Browser rendering: browser-enabled environment required. Empirical gates: real licensed corpus, independent annotators/participants and measured comparisons required.\", \"candidate\": \"git:6d8f1ceedde70877c1c7227d28f926464bed2dd6\", \"completed\": \"Integrated all software streams; 94 tests, architecture gates and synthetic mechanics checks passed.\", \"evidence\": \"tests/test_api.py, tests/test_runtime.py, tools/architecture_check.py, tools/evaluate.py; browser launch failed because executable is absent.\", \"handoff_id\": \"5bea7b65a4f796f8\", \"next\": \"WF-AUDIT-FINAL\", \"remaining\": \"Independent frozen-candidate review, verified GitHub publication, real-browser validation, live-provider/media and empirical Gates 0-5.\", \"root_ids\": [\"WF-ROOT\"], \"task\": \"WF-OPS\"}"
+        },
+        {
+          "text": "Code candidate ab33aaff and generation f5b020db independently accepted; publication and remote CI verification in progress. Wheel build/install/CLI passed. No production release."
+        }
+      ],
+      "owner": "root"
+    },
+    {
+      "id": "WF-G0",
+      "title": "Gate 0 independent corpus and evaluation design",
+      "status": "blocked",
+      "acceptance": "10\u201320 permitted real sources and independently collected problems; gold annotations, strong cited baseline and human review-time measurements.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": true,
+      "blocker": "Requires user-authorized real corpus/provider access, independent annotators/participants and stage-specific measurements; software work remains eligible.",
+      "dependencies": [
+        {
+          "depends_on_id": "WF-FOUNDATION",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {},
+      "comments": []
+    },
+    {
+      "id": "WF-G1",
+      "title": "Gate 1 adjudicated source fidelity comparison",
+      "status": "blocked",
+      "acceptance": "Held-out real dialogues and human adjudication show qualification/attribution benefits versus A0.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": true,
+      "blocker": "Requires user-authorized real corpus/provider access, independent annotators/participants and stage-specific measurements; software work remains eligible.",
+      "dependencies": [
+        {
+          "depends_on_id": "WF-G0",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {},
+      "comments": []
+    },
+    {
+      "id": "WF-G2",
+      "title": "Gate 2 scoped theory and negative transfer study",
+      "status": "blocked",
+      "acceptance": "A1/A2 blinded comparison on unseen source authors/domains; independent scope and negative-case judgments.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": true,
+      "blocker": "Requires user-authorized real corpus/provider access, independent annotators/participants and stage-specific measurements; software work remains eligible.",
+      "dependencies": [
+        {
+          "depends_on_id": "WF-G1",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {},
+      "comments": []
+    },
+    {
+      "id": "WF-G3",
+      "title": "Gate 3 useful invention comparison",
+      "status": "blocked",
+      "acceptance": "A2\u2013A4 blinded real-problem novelty/usefulness/diversity with prior-art and outcome evidence.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": true,
+      "blocker": "Requires user-authorized real corpus/provider access, independent annotators/participants and stage-specific measurements; software work remains eligible.",
+      "dependencies": [
+        {
+          "depends_on_id": "WF-G2",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {},
+      "comments": []
+    },
+    {
+      "id": "WF-G4",
+      "title": "Gate 4 prospective learning and human capability",
+      "status": "blocked",
+      "acceptance": "Preregistered real outcomes, causally cautious heldout comparisons and unaided human retention/agency measurements.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": true,
+      "blocker": "Requires user-authorized real corpus/provider access, independent annotators/participants and stage-specific measurements; software work remains eligible.",
+      "dependencies": [
+        {
+          "depends_on_id": "WF-G3",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {},
+      "comments": []
+    },
+    {
+      "id": "WF-G5",
+      "title": "Gate 5 production readiness and controlled autonomy",
+      "status": "blocked",
+      "acceptance": "Live provider/source/rights review, operations/load/security measurements and explicit production authorization; no external executor enabled by this build.",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "blocked": true,
+      "blocker": "Requires user-authorized real corpus/provider access, independent annotators/participants and stage-specific measurements; software work remains eligible.",
+      "dependencies": [
+        {
+          "depends_on_id": "WF-G4",
+          "type": "blocks"
+        }
+      ],
+      "metadata": {},
+      "comments": []
+    },
+    {
+      "id": "WF-AUDIT-STORE",
+      "title": "Independent storage/governance review",
+      "acceptance": "Restore/CAS/idempotency/deletion/rights/integrity review by a non-builder.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {},
+      "comments": [
+        {
+          "text": "Independent report produced on candidate40312598. Confirmed defects moved into explicit correction tasks; this closure accepts the report, not the product."
+        }
+      ],
+      "owner": "root"
+    },
+    {
+      "id": "WF-AUDIT-EVIDENCE",
+      "title": "Independent ingestion/evidence and HTTP privacy review",
+      "acceptance": "Exact anchors, denied bytes, model consent, API/export/caches and malformed inputs.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {},
+      "comments": [
+        {
+          "text": "Independent report produced on candidate40312598. Confirmed defects moved into explicit correction tasks; this closure accepts the report, not the product."
+        }
+      ],
+      "owner": "root"
+    },
+    {
+      "id": "WF-AUDIT-RUNTIME",
+      "title": "Independent retrieval/workflow/model adapter review",
+      "acceptance": "Historical context, negative evidence, budget, consent, retry/recovery and no external executor.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {},
+      "comments": [
+        {
+          "text": "Independent report produced on candidate40312598. Confirmed defects moved into explicit correction tasks; this closure accepts the report, not the product."
+        }
+      ],
+      "owner": "root"
+    },
+    {
+      "id": "WF-AUDIT-LEARN",
+      "title": "Independent decisions/learning/memory review",
+      "acceptance": "Temporal forecast sealing, actual skill support, human goals and quiet trigger semantics.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {},
+      "comments": [
+        {
+          "text": "Independent report produced on candidate40312598. Confirmed defects moved into explicit correction tasks; this closure accepts the report, not the product."
+        }
+      ],
+      "owner": "root"
+    },
+    {
+      "id": "WF-AUDIT-WEB",
+      "title": "Independent web/API/schema compatibility audit",
+      "acceptance": "Verify actual HTML controls/API payloads, source fidelity, truthful failures and available syntax checks; mark real-browser rendering unverified.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {},
+      "comments": [
+        {
+          "text": "Independent report produced on candidate40312598. Confirmed defects moved into explicit correction tasks; this closure accepts the report, not the product."
+        }
+      ],
+      "owner": "root"
+    },
+    {
+      "id": "WF-AUDIT-FINAL",
+      "title": "Independent integrated candidate review",
+      "acceptance": "Run full suite and evaluate against real supplied architecture; report confirmed blocking defects and external criteria truthfully.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {},
+      "comments": [
+        {
+          "text": "Independent report produced on candidate40312598. Confirmed defects moved into explicit correction tasks; this closure accepts the report, not the product."
+        }
+      ],
+      "owner": "root"
+    },
+    {
+      "id": "WF-BROWSER",
+      "title": "Real browser rendering and interaction validation",
+      "issue_type": "task",
+      "parent": "WF-ROOT",
+      "status": "blocked",
+      "blocked": true,
+      "acceptance": "Run tools/browser_smoke.cjs in an environment with Chromium and inspect desktop/mobile screenshots and keyboard interaction.",
+      "blocker": "This runtime has Playwright but no installed browser executable. No permitted browser binary is available. Development environment owner must supply a browser-enabled runtime.",
+      "metadata": {},
+      "comments": []
+    },
+    {
+      "id": "WF-FIX-STORE",
+      "title": "Rights ancestry, conservative governance and deletion cleanup",
+      "acceptance": "Rights ancestry, conservative governance and deletion cleanup with actual regression evidence and no invented empirical acceptance.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-FIX-EVIDENCE",
+      "title": "Keep model speaker identity uncertain",
+      "acceptance": "Keep model speaker identity uncertain with actual regression evidence and no invented empirical acceptance.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-FIX-LEARN",
+      "title": "Bind outcome retries to explicit timestamps",
+      "acceptance": "Bind outcome retries to explicit timestamps with actual regression evidence and no invented empirical acceptance.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-FIX-WEB",
+      "title": "Warnings, unavailable observations and task model-consent controls",
+      "acceptance": "Warnings, unavailable observations and task model-consent controls with actual regression evidence and no invented empirical acceptance.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-FIX-THEORY",
+      "title": "Canonical opt-in model processing for problem/theory context",
+      "acceptance": "Canonical opt-in model processing for problem/theory context with actual regression evidence and no invented empirical acceptance.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    },
+    {
+      "id": "WF-FIX-REVIEW",
+      "title": "Review exact corrected candidate independently",
+      "acceptance": "Review exact corrected candidate independently with actual regression evidence and no invented empirical acceptance.",
+      "issue_type": "task",
+      "parent": "WF-REVIEW",
+      "status": "closed",
+      "blocked": false,
+      "dependencies": [],
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637",
+            "requirements": [],
+            "evidence": [
+              {
+                "ref": "docs/audits/correction-review.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "115 local unittests plus architecture/evaluate/wheel installation checks",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and isolated component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
+      "comments": [],
+      "owner": "root"
+    }
+  ],
+  "memories": {
+    "foundry-mission": "{\"authorization\": {\"implementation\": true, \"production_changes\": false, \"publication\": true}, \"constraints\": [\"Preserve source meaning, epistemic separation, rights, human goals and authority.\", \"SQLite/files first; replaceable interfaces; no runtime dependency installation required.\", \"Six Luna agents in isolated worktrees plus root coordinator; independent criticism of actual output.\", \"External research/production/empirical criteria remain blocked until genuine prerequisites; implementation is authorized.\"], \"contract_versions\": {\"foundry-services\": \"1.0.0\", \"http-api\": \"1.0.0\", \"store-port\": \"1.0.0\"}, \"linked_task_ids\": [], \"mission_file\": \".delivery/mission.json\", \"mission_sha256\": \"1e64e96b27a9eecf92a6af69c088e9839da7be4c90a8d50b1ec7893c71869251\", \"objective\": \"Build the complete runnable Wisdom Foundry 11 reference implementation from the attached architecture; preserve all 22 sections and Gate 0\u20135 empirical acceptance without fabricated evidence.\", \"requirement_count\": 23, \"root_ids\": [\"WF-ROOT\"], \"scope_record_count\": null, \"unresolved_acceptance_criteria\": []}",
+    "foundry-handoff": "{\"blocker\": \"Browser rendering: browser-enabled environment required. Empirical gates: real licensed corpus, independent annotators/participants and measured comparisons required.\", \"candidate\": \"git:6d8f1ceedde70877c1c7227d28f926464bed2dd6\", \"completed\": \"Integrated all software streams; 94 tests, architecture gates and synthetic mechanics checks passed.\", \"evidence\": \"tests/test_api.py, tests/test_runtime.py, tools/architecture_check.py, tools/evaluate.py; browser launch failed because executable is absent.\", \"handoff_id\": \"5bea7b65a4f796f8\", \"next\": \"WF-AUDIT-FINAL\", \"remaining\": \"Independent frozen-candidate review, verified GitHub publication, real-browser validation, live-provider/media and empirical Gates 0-5.\", \"root_ids\": [\"WF-ROOT\"], \"task\": \"WF-OPS\"}"
+  }
+}

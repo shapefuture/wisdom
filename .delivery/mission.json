@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "objective": "Build the complete runnable Wisdom Foundry 11 reference implementation from the attached architecture; preserve all 22 sections and Gate 0–5 empirical acceptance without fabricated evidence.",
+  "roots": [
+    {
+      "id": "WF-ROOT",
+      "name": "Wisdom Foundry 11"
+    }
+  ],
+  "linked_task_ids": [],
+  "plan_maps": [],
+  "requirements": [
+    {
+      "id": "SPEC-01",
+      "task_ids": [
+        "WF-FOUNDATION"
+      ],
+      "acceptance": "Frozen ports, source spec, invariants, six isolated workcells and recovery tracker."
+    },
+    {
+      "id": "SPEC-02",
+      "task_ids": [
+        "WF-FOUNDATION"
+      ],
+      "acceptance": "Frozen ports, source spec, invariants, six isolated workcells and recovery tracker."
+    },
+    {
+      "id": "SPEC-03",
+      "task_ids": [
+        "WF-RUNTIME"
+      ],
+      "acceptance": "Permission-aware multi-lens context with negatives, hierarchy and version; bounded resumable jobs; triggers expiry/dedup/silence; explicit goals; real configurable provider with conservative offline mode."
+    },
+    {
+      "id": "SPEC-04",
+      "task_ids": [
+        "WF-STORE"
+      ],
+      "acceptance": "SQLite/FTS survives reopen; immutable spans/predictions; CAS/idempotency; tamper detection; rights/four-way gate; deletion propagates."
+    },
+    {
+      "id": "SPEC-05",
+      "task_ids": [
+        "WF-EVIDENCE"
+      ],
+      "acceptance": "Text/SRT/VTT offsets and timestamps verified; qualifications/disagreement preserved; analyst readings typed; corrections versioned; inaccessible source explicitly blocked."
+    },
+    {
+      "id": "SPEC-06",
+      "task_ids": [
+        "WF-THEORY"
+      ],
+      "acceptance": "Scoped theory and negative cases; mechanism cards; independent problem diagnosis; mapped/unmapped transfer; adversarial test; no-match result."
+    },
+    {
+      "id": "SPEC-07",
+      "task_ids": [
+        "WF-THEORY"
+      ],
+      "acceptance": "Scoped theory and negative cases; mechanism cards; independent problem diagnosis; mapped/unmapped transfer; adversarial test; no-match result."
+    },
+    {
+      "id": "SPEC-08",
+      "task_ids": [
+        "WF-LEARN"
+      ],
+      "acceptance": "Human choices and stopping rules; immutable pre-observation forecasts; experiments and bounded observations; conditional skills with distinct knowledge/authority gates."
+    },
+    {
+      "id": "SPEC-09",
+      "task_ids": [
+        "WF-RUNTIME"
+      ],
+      "acceptance": "Permission-aware multi-lens context with negatives, hierarchy and version; bounded resumable jobs; triggers expiry/dedup/silence; explicit goals; real configurable provider with conservative offline mode."
+    },
+    {
+      "id": "SPEC-10",
+      "task_ids": [
+        "WF-RUNTIME"
+      ],
+      "acceptance": "Permission-aware multi-lens context with negatives, hierarchy and version; bounded resumable jobs; triggers expiry/dedup/silence; explicit goals; real configurable provider with conservative offline mode."
+    },
+    {
+      "id": "SPEC-11",
+      "task_ids": [
+        "WF-LEARN"
+      ],
+      "acceptance": "Human choices and stopping rules; immutable pre-observation forecasts; experiments and bounded observations; conditional skills with distinct knowledge/authority gates."
+    },
+    {
+      "id": "SPEC-12",
+      "task_ids": [
+        "WF-EVIDENCE"
+      ],
+      "acceptance": "Text/SRT/VTT offsets and timestamps verified; qualifications/disagreement preserved; analyst readings typed; corrections versioned; inaccessible source explicitly blocked."
+    },
+    {
+      "id": "SPEC-13",
+      "task_ids": [
+        "WF-G0"
+      ],
+      "acceptance": "10–20 permitted real sources and independently collected problems; gold annotations, strong cited baseline and human review-time measurements."
+    },
+    {
+      "id": "SPEC-14",
+      "task_ids": [
+        "WF-STORE"
+      ],
+      "acceptance": "SQLite/FTS survives reopen; immutable spans/predictions; CAS/idempotency; tamper detection; rights/four-way gate; deletion propagates."
+    },
+    {
+      "id": "SPEC-15",
+      "task_ids": [
+        "WF-OPS"
+      ],
+      "acceptance": "End-to-end HTTP scenario, CLI, CI, architecture/swap/recovery checks, generation identity, rollback instructions and pushed candidate."
+    },
+    {
+      "id": "SPEC-16",
+      "task_ids": [
+        "WF-OPS"
+      ],
+      "acceptance": "End-to-end HTTP scenario, CLI, CI, architecture/swap/recovery checks, generation identity, rollback instructions and pushed candidate."
+    },
+    {
+      "id": "SPEC-17",
+      "task_ids": [
+        "WF-FOUNDATION"
+      ],
+      "acceptance": "Frozen ports, source spec, invariants, six isolated workcells and recovery tracker."
+    },
+    {
+      "id": "SPEC-18",
+      "task_ids": [
+        "WF-WEB"
+      ],
+      "acceptance": "Keyboard usable source intake/review, atlas, discovery, decision/experiment/TRACE flows, lineage and export; no fake data or unsafe HTML."
+    },
+    {
+      "id": "SPEC-19",
+      "task_ids": [
+        "WF-G0"
+      ],
+      "acceptance": "10–20 permitted real sources and independently collected problems; gold annotations, strong cited baseline and human review-time measurements."
+    },
+    {
+      "id": "SPEC-20",
+      "task_ids": [
+        "WF-FOUNDATION"
+      ],
+      "acceptance": "Frozen ports, source spec, invariants, six isolated workcells and recovery tracker."
+    },
+    {
+      "id": "SPEC-21",
+      "task_ids": [
+        "WF-THEORY"
+      ],
+      "acceptance": "Scoped theory and negative cases; mechanism cards; independent problem diagnosis; mapped/unmapped transfer; adversarial test; no-match result."
+    },
+    {
+      "id": "SPEC-22",
+      "task_ids": [
+        "WF-REVIEW"
+      ],
+      "acceptance": "Separate agent examines real implementation/tests, adversarial injection/rights/immutability; records blocking defects and exact candidate identity."
+    },
+    {
+      "id": "AAA-7.1",
+      "task_ids": [
+        "WF-FOUNDATION",
+        "WF-OPS",
+        "WF-REVIEW"
+      ],
+      "acceptance": "Isolated versioned workcells, contract-bound swappability, explicit invariants/effects, immutable generation and tested recovery; full conformance not assumed."
+    }
+  ],
+  "constraints": [
+    "Preserve source meaning, epistemic separation, rights, human goals and authority.",
+    "SQLite/files first; replaceable interfaces; no runtime dependency installation required.",
+    "Six Luna agents in isolated worktrees plus root coordinator; independent criticism of actual output.",
+    "External research/production/empirical criteria remain blocked until genuine prerequisites; implementation is authorized."
+  ],
+  "authorization": {
+    "implementation": true,
+    "publication": true,
+    "production_changes": false
+  },
+  "tracker": {
+    "kind": "command",
+    "commands": {
+      "snapshot": [
+        "python3",
+        "tools/tracker.py",
+        "snapshot"
+      ],
+      "recall": [
+        "python3",
+        "tools/tracker.py",
+        "recall",
+        "{key}"
+      ],
+      "remember": [
+        "python3",
+        "tools/tracker.py",
+        "remember",
+        "{key}",
+        "{text}"
+      ],
+      "comments": [
+        "python3",
+        "tools/tracker.py",
+        "comments",
+        "{task_id}"
+      ],
+      "comment": [
+        "python3",
+        "tools/tracker.py",
+        "comment",
+        "{task_id}",
+        "{text}"
+      ]
+    }
+  },
+  "quality": {
+    "required_commands": [
+      [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      [
+        "python3",
+        "tools/architecture_check.py"
+      ]
+    ],
+    "independent_review_required": true
+  },
+  "parallel": {
+    "max_workers": 6,
+    "contract_versions": {
+      "foundry-services": "1.0.0",
+      "store-port": "1.0.0",
+      "http-api": "1.0.0"
+    },
+    "integrator_paths": [
+      "AGENTS.md",
+      ".git/**",
+      ".delivery/**",
+      ".github/**",
+      "pyproject.toml",
+      "wisdom/ports.py",
+      "wisdom/errors.py",
+      "wisdom/composition.py",
+      "wisdom/api.py",
+      "wisdom/cli.py",
+      "wisdom/retrieval.py",
+      "wisdom/memory.py",
+      "wisdom/workflows.py",
+      "wisdom/providers.py",
+      "wisdom/watchdog.py"
+    ]
+  },
+  "memory_keys": {
+    "mission": "foundry-mission",
+    "handoff": "foundry-handoff"
+  }
+}

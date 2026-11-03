@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "slots": [
+    {
+      "id": "canonical-store",
+      "contract": "store-port@1.0.0",
+      "binding": "wisdom.store.Store",
+      "compatibility": "tests.test_store"
+    },
+    {
+      "id": "proposal-provider",
+      "contract": "proposal-provider@1.0.0",
+      "binding": "optional JSONProvider through ConsentProvider",
+      "compatibility": "tests.test_runtime"
+    },
+    {
+      "id": "evidence",
+      "contract": "foundry-services@1.0.0",
+      "binding": "wisdom.evidence.EvidenceService",
+      "compatibility": "tests.test_evidence"
+    },
+    {
+      "id": "retrieval",
+      "contract": "foundry-services@1.0.0",
+      "binding": "wisdom.retrieval.RetrievalService",
+      "compatibility": "tests.test_runtime"
+    }
+  ],
+  "composition_root": "wisdom/composition.py",
+  "runtime_profiles": [
+    "local",
+    "advisory"
+  ],
+  "disabled_profiles": [
+    "external-agentic",
+    "self-modifying",
+    "distributed",
+    "multi-tenant"
+  ]
+}
+

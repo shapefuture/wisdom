@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:utterance:v1",
+  "title": "utterance",
+  "type": "object",
+  "required": [
+    "source_id",
+    "span_ids",
+    "turn",
+    "speech_act"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "span_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "turn": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "speaker": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "speech_act": {
+      "enum": [
+        "assertion",
+        "question",
+        "objection",
+        "clarification",
+        "retraction",
+        "example",
+        "metaphor",
+        "unknown"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:experiment:v1",
+  "title": "experiment",
+  "type": "object",
+  "required": [
+    "title",
+    "setup",
+    "measurement",
+    "comparator",
+    "stop_conditions"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "setup": {
+      "type": "string"
+    },
+    "measurement": {
+      "type": "string"
+    },
+    "comparator": {
+      "type": [
+        "string",
+        "object"
+      ]
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prediction_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:idea:v1",
+  "title": "idea",
+  "type": "object",
+  "required": [
+    "title",
+    "epistemic_type",
+    "novelty_status"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "problem_id": {
+      "type": "string"
+    },
+    "source_mechanism_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "epistemic_type": {
+      "const": "TRANSFER_HYPOTHESIS"
+    },
+    "novelty_status": {
+      "const": "unchecked"
+    },
+    "mismatches": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "null"
+      ]
+    },
+    "cheapest_test": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}

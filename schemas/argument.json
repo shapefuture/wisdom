@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wisdom:argument:v1",
+  "title": "argument",
+  "type": "object",
+  "required": [
+    "claim",
+    "grounds",
+    "warrant",
+    "qualifier",
+    "rebuttal"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "span_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "claim": {
+      "type": "string"
+    },
+    "grounds": {
+      "type": "string"
+    },
+    "warrant": {
+      "type": "string"
+    },
+    "backing": {
+      "type": "string"
+    },
+    "qualifier": {
+      "type": "string"
+    },
+    "rebuttal": {
+      "type": "string"
+    },
+    "epistemic_type": {
+      "enum": [
+        "INTERPRETATION",
+        "SOURCE_REPORT"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "description": "Version 1 payload. Runtime services enforce references, scope, rights, temporal order and immutable writes. Internal replay plans use assessment with source lineage."
+}
