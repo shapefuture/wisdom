@@ -353,7 +353,7 @@ Mining (intake, candidates, verification) is the input layer. Its outputs are `S
 - Idempotent, resumable, with explicit failure states (`DISCOVERED`, `ACCESSIBLE`, `CAPTURED`, `PARTIAL`, `BLOCKED`, `REVIEWED`, `EXPIRED`, with reason and time).
 - Corpora stay out of git. Raw transcripts live in a private store or a local workspace. The repo carries code, schemas, and manifests without the content.
 
-**Segmentation.** Hierarchy: video → chapters → argument episodes → speaker turns → sentence-bounded spans with context windows. Boundaries are retrieval aids, not truth boundaries. Median span length should be a few sentences; the Stoa median of 114 words is too long for a claim.
+**Segmentation.** Hierarchy: video → chapters → argument episodes → speaker turns → sentence-bounded spans with context windows. Boundaries are retrieval aids, not truth boundaries. Median span length should be a few sentences. An external prototype's median of about 114 words suggested that its spans were too long for a claim; this is an unverified observation from outside the repository, and Phase 2 must re-derive it from the packaged pilot corpus before it guides design.
 
 **Coverage map.** Per source and per corpus: topics, speakers where known, potential arguments, skipped or visual-only passages, transcript provenance, quality flags. The first screen of any corpus is its coverage and gaps.
 
@@ -361,7 +361,7 @@ Mining (intake, candidates, verification) is the input layer. Its outputs are `S
 - Deterministic, versioned marker patterns generate candidates.
 - Each candidate is stored as `SOURCE_REPORT` (the quote) with `kind_hints`. Never a fixed claim status.
 - Per-source and per-kind caps prevent one guest dominating.
-- Every quote is verified against its stored span before save. The check I ran on the Stoa atlas passed 7,010 of 7,010 with transcripts available. Treat the verbatim test as a regression gate.
+- Every quote is verified against its stored span before save. An earlier verbatim check on an external Stoa prototype reported 7,010 of 7,010 quotes with transcripts available. That count is an external observation, not regenerable from this repository, and Phase 2 must re-derive it from the packaged pilot corpus before it is cited as evidence. Treat the verbatim test as a regression gate.
 - The scoring formula is explicit, versioned, and described as quotability and diversity. It is never called wisdom.
 - Optional provider-assisted refinement goes through the existing proposal validator. Its output is untrusted and discarded whole if malformed.
 
@@ -521,7 +521,7 @@ Each phase has a tracker entry, an acceptance test, and an independent review be
 
 **Phase 1. Intake and rights.**
 - Bundle importer, rights attestation, transcript provenance classes, failure states, coverage report, corpora kept out of git.
-- Exit: a 724-entry manifest imports idempotently, every gap is named, and rights records appear on every source.
+- Exit: the rights-attested pilot manifest imports idempotently end-to-end (the import report records the entry count), every gap is named, and rights records appear on every source.
 
 **Phase 2. Mining and gold set.**
 - Segmenter, marker-based candidate miner, caps, verbatim gate, scoring formula, reproducibility check.
