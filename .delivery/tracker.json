@@ -4,9 +4,11 @@
       "id": "WF-ROOT",
       "title": "Deliver Wisdom Foundry 11",
       "issue_type": "epic",
-      "status": "in_progress",
+      "status": "blocked",
       "acceptance": "All 22 blueprint sections mapped, software verified and external empirical gates evidenced independently.",
-      "metadata": {}
+      "metadata": {},
+      "blocked": true,
+      "blocker": "Software is published and independently reviewed. Full mission acceptance still requires real-browser/user validation and empirical Gates0-5. See docs/DELIVERY.md for concrete owners and prerequisites."
     },
     {
       "id": "WF-FOUNDATION",
@@ -351,7 +353,7 @@
     {
       "id": "WF-OPS",
       "title": "Integrated delivery and operational assurance",
-      "status": "in_progress",
+      "status": "closed",
       "acceptance": "End-to-end HTTP scenario, CLI, CI, architecture/swap/recovery checks, generation identity, rollback instructions and pushed candidate.",
       "issue_type": "task",
       "parent": "WF-ROOT",
@@ -362,13 +364,50 @@
           "type": "blocks"
         }
       ],
-      "metadata": {},
+      "metadata": {
+        "delivery": {
+          "acceptance": {
+            "decision": "accepted",
+            "candidate": "git:842f6e94a52102ec26360bd3140e63c8a54cf6f3",
+            "requirements": [
+              "SPEC-15",
+              "SPEC-16"
+            ],
+            "evidence": [
+              {
+                "ref": "docs/DELIVERY.md",
+                "outcome": "passed"
+              },
+              {
+                "ref": "https://github.com/shapefuture/wisdom/actions/runs/41618578054",
+                "outcome": "passed"
+              }
+            ],
+            "independent_review": {
+              "reviewer": "Luna review agent",
+              "builder": "root and component builders",
+              "ref": "docs/audits/correction-review.md",
+              "decision": "accepted",
+              "candidate": "git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637"
+            }
+          }
+        }
+      },
       "comments": [
         {
           "text": "DELIVERY-HANDOFF 5bea7b65a4f796f8\n{\"blocker\": \"Browser rendering: browser-enabled environment required. Empirical gates: real licensed corpus, independent annotators/participants and measured comparisons required.\", \"candidate\": \"git:6d8f1ceedde70877c1c7227d28f926464bed2dd6\", \"completed\": \"Integrated all software streams; 94 tests, architecture gates and synthetic mechanics checks passed.\", \"evidence\": \"tests/test_api.py, tests/test_runtime.py, tools/architecture_check.py, tools/evaluate.py; browser launch failed because executable is absent.\", \"handoff_id\": \"5bea7b65a4f796f8\", \"next\": \"WF-AUDIT-FINAL\", \"remaining\": \"Independent frozen-candidate review, verified GitHub publication, real-browser validation, live-provider/media and empirical Gates 0-5.\", \"root_ids\": [\"WF-ROOT\"], \"task\": \"WF-OPS\"}"
         },
         {
           "text": "Code candidate ab33aaff and generation f5b020db independently accepted; publication and remote CI verification in progress. Wheel build/install/CLI passed. No production release."
+        },
+        {
+          "text": "DELIVERY-HANDOFF c62e83bd77e4d7a5\n{\"blocker\": \"Actual browser runtime and external empirical prerequisites remain unavailable; publication verification is still eligible now.\", \"candidate\": \"git:ab33aaff1858f83d86ed38ce491fee1b6fb5e637\", \"completed\": \"Code and independent review published to GitHub main, commit842f6e94a52102ec26360bd3140e63c8a54cf6f3; identical local/remote Git tree ed6f88f64b55d1adf85578f80c40aa9702f0d8b6.\", \"evidence\": \"115 tests, independent correction review, architecture/evaluate/wheel install/CLI passed; publication exact-tree identity verified.\", \"handoff_id\": \"c62e83bd77e4d7a5\", \"next\": \"WF-OPS\", \"remaining\": \"Read remote commit/CI, persist final publication evidence; browser and empirical gates remain blocked.\", \"root_ids\": [\"WF-ROOT\"], \"task\": \"WF-OPS\"}"
+        },
+        {
+          "text": "Published main at842f6e94; Git tree exactly ed6f88f64b55d1adf85578f80c40aa9702f0d8b6; GitHub Actions41618578054 succeeded. Code generation unchanged by final handoff documentation."
+        },
+        {
+          "text": "DELIVERY-HANDOFF 6429dcae6624c193\n{\"blocker\": \"No eligible coding task remains. Browser owner must provide Chromium-enabled environment. Research owner must supply authorized corpus/problems, independent annotators/participants and prospective measurements. Operator must supply approved live-service credentials/rights before live integration and production review.\", \"candidate\": \"git:842f6e94a52102ec26360bd3140e63c8a54cf6f3\", \"completed\": \"Published reviewed software on GitHub main with exact tree match;115 tests and remote GitHub Actions succeeded; wheel/installed CLI and independent code review passed.\", \"evidence\": \"docs/DELIVERY.md; docs/audits/correction-review.md; https://github.com/shapefuture/wisdom/actions/runs/41618578054; generation f5b020db957a96619c15c99af699e91e1b469bc98790fc9ae00a5e86b7b8ac6b.\", \"handoff_id\": \"6429dcae6624c193\", \"next\": null, \"remaining\": \"WF-WEB/WF-BROWSER real browser and user validation; Gates0-5 actual source/problem corpus, independent evaluation, real outcomes/capability and live integration/production acceptance.\", \"root_ids\": [\"WF-ROOT\"], \"task\": \"WF-OPS\"}"
         }
       ],
       "owner": "root"
@@ -377,7 +416,7 @@
       "id": "WF-G0",
       "title": "Gate 0 independent corpus and evaluation design",
       "status": "blocked",
-      "acceptance": "10\u201320 permitted real sources and independently collected problems; gold annotations, strong cited baseline and human review-time measurements.",
+      "acceptance": "10–20 permitted real sources and independently collected problems; gold annotations, strong cited baseline and human review-time measurements.",
       "issue_type": "task",
       "parent": "WF-ROOT",
       "blocked": true,
@@ -431,7 +470,7 @@
       "id": "WF-G3",
       "title": "Gate 3 useful invention comparison",
       "status": "blocked",
-      "acceptance": "A2\u2013A4 blinded real-problem novelty/usefulness/diversity with prior-art and outcome evidence.",
+      "acceptance": "A2–A4 blinded real-problem novelty/usefulness/diversity with prior-art and outcome evidence.",
       "issue_type": "task",
       "parent": "WF-ROOT",
       "blocked": true,
@@ -825,7 +864,7 @@
     }
   ],
   "memories": {
-    "foundry-mission": "{\"authorization\": {\"implementation\": true, \"production_changes\": false, \"publication\": true}, \"constraints\": [\"Preserve source meaning, epistemic separation, rights, human goals and authority.\", \"SQLite/files first; replaceable interfaces; no runtime dependency installation required.\", \"Six Luna agents in isolated worktrees plus root coordinator; independent criticism of actual output.\", \"External research/production/empirical criteria remain blocked until genuine prerequisites; implementation is authorized.\"], \"contract_versions\": {\"foundry-services\": \"1.0.0\", \"http-api\": \"1.0.0\", \"store-port\": \"1.0.0\"}, \"linked_task_ids\": [], \"mission_file\": \".delivery/mission.json\", \"mission_sha256\": \"1e64e96b27a9eecf92a6af69c088e9839da7be4c90a8d50b1ec7893c71869251\", \"objective\": \"Build the complete runnable Wisdom Foundry 11 reference implementation from the attached architecture; preserve all 22 sections and Gate 0\u20135 empirical acceptance without fabricated evidence.\", \"requirement_count\": 23, \"root_ids\": [\"WF-ROOT\"], \"scope_record_count\": null, \"unresolved_acceptance_criteria\": []}",
-    "foundry-handoff": "{\"blocker\": \"Browser rendering: browser-enabled environment required. Empirical gates: real licensed corpus, independent annotators/participants and measured comparisons required.\", \"candidate\": \"git:6d8f1ceedde70877c1c7227d28f926464bed2dd6\", \"completed\": \"Integrated all software streams; 94 tests, architecture gates and synthetic mechanics checks passed.\", \"evidence\": \"tests/test_api.py, tests/test_runtime.py, tools/architecture_check.py, tools/evaluate.py; browser launch failed because executable is absent.\", \"handoff_id\": \"5bea7b65a4f796f8\", \"next\": \"WF-AUDIT-FINAL\", \"remaining\": \"Independent frozen-candidate review, verified GitHub publication, real-browser validation, live-provider/media and empirical Gates 0-5.\", \"root_ids\": [\"WF-ROOT\"], \"task\": \"WF-OPS\"}"
+    "foundry-mission": "{\"authorization\": {\"implementation\": true, \"production_changes\": false, \"publication\": true}, \"constraints\": [\"Preserve source meaning, epistemic separation, rights, human goals and authority.\", \"SQLite/files first; replaceable interfaces; no runtime dependency installation required.\", \"Six Luna agents in isolated worktrees plus root coordinator; independent criticism of actual output.\", \"External research/production/empirical criteria remain blocked until genuine prerequisites; implementation is authorized.\"], \"contract_versions\": {\"foundry-services\": \"1.0.0\", \"http-api\": \"1.0.0\", \"store-port\": \"1.0.0\"}, \"linked_task_ids\": [], \"mission_file\": \".delivery/mission.json\", \"mission_sha256\": \"1e64e96b27a9eecf92a6af69c088e9839da7be4c90a8d50b1ec7893c71869251\", \"objective\": \"Build the complete runnable Wisdom Foundry 11 reference implementation from the attached architecture; preserve all 22 sections and Gate 0–5 empirical acceptance without fabricated evidence.\", \"requirement_count\": 23, \"root_ids\": [\"WF-ROOT\"], \"scope_record_count\": null, \"unresolved_acceptance_criteria\": []}",
+    "foundry-handoff": "{\"blocker\": \"No eligible coding task remains. Browser owner must provide Chromium-enabled environment. Research owner must supply authorized corpus/problems, independent annotators/participants and prospective measurements. Operator must supply approved live-service credentials/rights before live integration and production review.\", \"candidate\": \"git:842f6e94a52102ec26360bd3140e63c8a54cf6f3\", \"completed\": \"Published reviewed software on GitHub main with exact tree match;115 tests and remote GitHub Actions succeeded; wheel/installed CLI and independent code review passed.\", \"evidence\": \"docs/DELIVERY.md; docs/audits/correction-review.md; https://github.com/shapefuture/wisdom/actions/runs/41618578054; generation f5b020db957a96619c15c99af699e91e1b469bc98790fc9ae00a5e86b7b8ac6b.\", \"handoff_id\": \"6429dcae6624c193\", \"next\": null, \"remaining\": \"WF-WEB/WF-BROWSER real browser and user validation; Gates0-5 actual source/problem corpus, independent evaluation, real outcomes/capability and live integration/production acceptance.\", \"root_ids\": [\"WF-ROOT\"], \"task\": \"WF-OPS\"}"
   }
 }
